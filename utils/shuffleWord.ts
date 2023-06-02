@@ -1,4 +1,5 @@
 import easy_en from "./easy_en.json";
+import cn from "./cn.json";
 import en from "./en.json";
 import es from "./es.json";
 import fr from "./fr.json";
@@ -9,6 +10,9 @@ export const shuffleWord = (maxWord: number, language: string) => {
   switch (language) {
     case "en":
       shuffledWord = en.slice(0);
+      break;
+    case "cn":
+      shuffledWord = cn.slice(0);
       break;
     case "es":
       shuffledWord = es.slice(0);

@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 const IndexPage = () => {
   const [words, setWords] = useState<string[]>([""]);
   const [wordInput, setWordInput] = useState<string>("");
-  const [language, setLanguage] = useState<string>("easy_en");
+  const [language, setLanguage] = useState<string>("cn");
   const [isInputCorrect, setIsInputCorrect] = useState<boolean>(true);
   const [correctKeystroke, setCorrectKeystroke] = useState<number>(0);
   const [wrongKeystroke, setWrongKeystroke] = useState<number>(0);

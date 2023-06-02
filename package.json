@@ -2,9 +2,9 @@
   "name": "typing-test",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node_modules/next/dist/bin/next",
+    "build": "node_modules/next/dist/bin/next build",
+    "start": "node_modules/next/dist/bin/next start",
     "type-check": "tsc"
   },
   "dependencies": {

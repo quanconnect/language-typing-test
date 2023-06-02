@@ -14,6 +14,9 @@ const Records: React.FC<Props> = (props) => {
     case "en":
       lang = "hard english";
       break;
+    case "cn":
+      lang = "chinese";
+      break;
     case "es":
       lang = "hard spanish";
       break;
