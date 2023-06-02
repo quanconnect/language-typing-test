@@ -82,6 +82,10 @@ To get a local copy up and running follow these simple steps.
 This is an example of how to list things you need to use the software and how to install them.
 * yarn (or npm)
   ```sh
+  #(macos install node version manager)
+  brew install nvm
+  nvm install 15
+
   npm install --global yarn
   ```
 
@@ -89,11 +93,15 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/gimenezpablonl/typing-test.git
+   git clone git@github.com:quanconnect/language-typing-test.git
    ```
 2. Install packages
    ```sh
    yarn
+   ```
+3. Run
+   ```sh
+   npm run dev
    ```
 
 
@@ -102,13 +110,3 @@ This is an example of how to list things you need to use the software and how to
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Twitter - [@gimenezpablonl](https://twitter.com/gimenezpablonl)
-Email - gimenezpablonl@gmail.com
-Project Link: [https://github.com/gimenezpablonl/typing-test](https://github.com/gimenezpablonl/typing-test)
