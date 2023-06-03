@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useMemo, useRef } from "react";
 import LanguageSelector from "../components/LanguageSelector";
 import Heading from "../components/Heading";
+import Payment from "../components/Payment";
 import WordContainer from "../components/WordContainer";
 import Input from "../components/Input";
 import Result from "../components/Result";
@@ -9,6 +10,7 @@ import RestartButton from "../components/RestartButton";
 import Records from "../components/Records";
 import { shuffleWord } from "../utils/shuffleWord";
 import Footer from "../components/Footer";
+// import { SquarePaymentsForm } from "react-square-web-payments-sdk";
 
 const IndexPage = () => {
   const [words, setWords] = useState<string[]>([""]);
@@ -29,6 +31,9 @@ const IndexPage = () => {
     () => correctKeystroke + wrongKeystroke,
     [correctKeystroke, wrongKeystroke]
   );
+  // const dotenv = require('dotenv').config(); // Loads .env file
+  // const appId = '{YOUR_SANDBOX_APPLICATION_ID}';
+  // const locationId = '{YOUR_SANDBOX_LOCATION_ID}'; 
 
   const intervalRef = useRef<any>(null);
 
@@ -76,8 +81,23 @@ const IndexPage = () => {
       }
     }, 1000);
   };
+  const getCanto = (inputText: string) => {
+    var requestOptions: RequestInit = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    fetch(`https://cache-a.oddcast.com/tts/genB.php?EID=3&LID=10&VID=6&TXT=${inputText}&EXT=mp3&FNAME=&ACC=15679&SceneID=2646114&HTTP_ERR=`, requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+  };
+  // https://cache-a.oddcast.com/tts/genB.php?EID=3&LID=10&VID=6&TXT=你好&EXT=mp3&FNAME=&ACC=15679&SceneID=2646114&HTTP_ERR=
+  // var a = new Audio("https://cache-a.oddcast.com/tts/genB.php?EID=3&LID=10&VID=6&TXT=你好&EXT=mp3&FNAME=&ACC=15679&SceneID=2646114&HTTP_ERR="); a.play();
+  // 
   const inputHandler = (inputText: string) => {
     setWordInput(inputText);
+    getCanto(inputText);
 
     if (inputText.endsWith(" ")) {
       setWordInput("");
@@ -156,6 +176,8 @@ const IndexPage = () => {
         <div className="lg:flex">
           <div className="flex-none">
             <Heading />
+            
+            <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
             <div className="md:max-w-4xl lg:max-w-2xl xl:max-w-3xl lg:mr-8">
               <WordContainer
                 words={words}
@@ -209,6 +231,10 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
+      
+      {/* <SquarePaymentsForm></SquarePaymentsForm> */}
+      
+      <Payment />
       <Footer />
     </>
   );

@@ -8,7 +8,7 @@ const Heading: React.FC = () => (
     <h2 className="font-medium text-lg text-center text-gray-500 mt-2 mb-5">
       How fast can you type?
     </h2>
+    <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
   </>
 );
-
 export default Heading;
