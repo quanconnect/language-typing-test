@@ -15,7 +15,7 @@ import Footer from "../components/Footer";
 const IndexPage = () => {
   const [words, setWords] = useState<string[]>([""]);
   const [wordInput, setWordInput] = useState<string>("");
-  const [language, setLanguage] = useState<string>("cn");
+  const [language, setLanguage] = useState<string>("easy_en");
   const [isInputCorrect, setIsInputCorrect] = useState<boolean>(true);
   const [correctKeystroke, setCorrectKeystroke] = useState<number>(0);
   const [wrongKeystroke, setWrongKeystroke] = useState<number>(0);
@@ -31,6 +31,7 @@ const IndexPage = () => {
     () => correctKeystroke + wrongKeystroke,
     [correctKeystroke, wrongKeystroke]
   );
+  // TODO: remove comments
   // const dotenv = require('dotenv').config(); // Loads .env file
   // const appId = '{YOUR_SANDBOX_APPLICATION_ID}';
   // const locationId = '{YOUR_SANDBOX_LOCATION_ID}'; 

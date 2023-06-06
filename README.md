@@ -7,7 +7,7 @@
 ***
 ***
 *** To avoid retyping too much info. Do a search and replace for the following:
-*** gimenezpablonl, typing-test-cra, twitter_handle, gimenezpablonl@gmail.com, Typing test, A 10fastfingers clone for test your typing speed in English, Spanish and French built in React and Typescript and using Tailwindcss.
+*** typing-test-cra, twitter_handle, Typing test, A 10fastfingers clone for test your typing speed in English, Spanish and French built in React and Typescript and using Tailwindcss.
 -->
 
 
@@ -15,21 +15,16 @@
 <br />
 <p align="center">
 <p align="center">
-  <a href="https://github.com/gimenezpablonl/typing-test">
+  <a href="https://github.com/quanconnect/language-typing-test">
     <img src="assets/logo.svg" alt="Logo" width="180" height="180">
   </a>
   <h3 align="center">Typing test</h3>
   <p align="center">
     A 10fastfingers clone for test your typing speed in English, Spanish and French built in React and Typescript.
     <br />
-    <a href="https://github.com/gimenezpablonl/typing-test"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/quanconnect/language-typing-test"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://gimenezpablonl-typing-test.vercel.app">View Demo</a>
-    ·
-    <a href="https://github.com/gimenezpablonl/typing-test/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/gimenezpablonl/typing-test/issues">Request Feature</a>
   </p>
 </p>
 
